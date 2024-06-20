@@ -31,6 +31,7 @@ class SplashScreen extends StatefulWidget {
 class _SplashScreenState extends State<SplashScreen> with SingleTickerProviderStateMixin {
   bool animated=false;
   late AnimationController _controller;
+  @override
   void initState(){
      AnimationController(
       vsync: this,
@@ -44,7 +45,7 @@ class _SplashScreenState extends State<SplashScreen> with SingleTickerProviderSt
   @override
   Widget build(BuildContext context) {
     void endcallback(){
-     Navigator.push(context, MaterialPageRoute(builder: (builder)=>MyApp()));
+     Navigator.push(context, MaterialPageRoute(builder: (builder)=>const MyApp()));
     }
     return
 
@@ -61,12 +62,12 @@ class _SplashScreenState extends State<SplashScreen> with SingleTickerProviderSt
 
                child:
 
-               Align(
+               const Align(
                    alignment: Alignment.center,
                    child:Text('Learn Code Overcome',))
                , style:
 
-          animated? TextStyle(fontSize: 40):TextStyle(fontSize: 27,fontWeight: FontWeight.bold),
+          animated? const TextStyle(fontSize: 40):const TextStyle(fontSize: 27,fontWeight: FontWeight.bold),
 
                duration: const Duration(milliseconds: 2000),
          onEnd: endcallback,)

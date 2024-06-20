@@ -18,8 +18,8 @@ class _FilterState extends State<Filter> {
     return
 
      Scaffold(body:Stack(children:[ SafeArea(child: SingleChildScrollView(
-       padding: EdgeInsets.all(20),
-        child: Container(
+       padding: const EdgeInsets.all(20),
+        child: SizedBox(
           height: size.height,
           child:Column(
 
@@ -28,7 +28,7 @@ class _FilterState extends State<Filter> {
           children: [
             InkWell(
                 onTap: () async {
-                  await Future.delayed(Duration(milliseconds: 300));
+                  await Future.delayed(const Duration(milliseconds: 300));
 
                   Navigator.pop(context);
                 },
@@ -41,11 +41,11 @@ class _FilterState extends State<Filter> {
                         borderRadius: BorderRadius.circular(12)
                     ),
                     child:
-                    Icon(Icons.arrow_back_ios_outlined,color: Colors.grey,size: 15,)))),
-            SizedBox(height: 15,),
-            Text('10 000 Courses',style: TextStyle(fontWeight: FontWeight.bold,fontSize: 18),),
-            SizedBox(height: 20,),
-            Text('Filter By',style: TextStyle(fontWeight: FontWeight.bold,fontSize: 16),),
+                    const Icon(Icons.arrow_back_ios_outlined,color: Colors.grey,size: 15,)))),
+            const SizedBox(height: 15,),
+            const Text('10 000 Courses',style: TextStyle(fontWeight: FontWeight.bold,fontSize: 18),),
+            const SizedBox(height: 20,),
+            const Text('Filter By',style: TextStyle(fontWeight: FontWeight.bold,fontSize: 16),),
         DropdownButton<String>(
           value: dropdownValue,
           icon: const Icon(Icons.arrow_downward),
@@ -64,13 +64,13 @@ class _FilterState extends State<Filter> {
               .map<DropdownMenuItem<String>>((String value) {
             return DropdownMenuItem<String>(
               value: value,
-              child: Text(value,style: TextStyle(fontSize: 18),),
+              child: Text(value,style: const TextStyle(fontSize: 18),),
             );
           }).toList(),
         ),
-            SizedBox(height: 20,),
+            const SizedBox(height: 20,),
 
-            Text('Level',style: TextStyle(fontWeight: FontWeight.bold,fontSize: 16),),
+            const Text('Level',style: TextStyle(fontWeight: FontWeight.bold,fontSize: 16),),
        Column(
 
          crossAxisAlignment: CrossAxisAlignment.start,

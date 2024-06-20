@@ -15,14 +15,14 @@ class _CoursePlaylistState extends State<CoursePlaylist> {
 
     return
     Scaffold(
-        body: Stack(children:[
+        body: Stack(clipBehavior: Clip.none, children:[
           SafeArea(child: SingleChildScrollView(
-        child: Container(
+        child: SizedBox(
           height: size.height,
           child:Column(
             children:[Container(
 
-        margin: EdgeInsets.all(20),
+        margin: const EdgeInsets.all(20),
     child: Column(
       crossAxisAlignment: CrossAxisAlignment.start,
     children: [
@@ -31,7 +31,7 @@ Row(
   children: [
     InkWell(
         onTap: () async {
-          await Future.delayed(Duration(milliseconds: 300));
+          await Future.delayed(const Duration(milliseconds: 300));
 
           Navigator.pop(context);
         },
@@ -44,8 +44,8 @@ Row(
                 borderRadius: BorderRadius.circular(12)
             ),
             child:
-            Icon(Icons.arrow_back_ios_outlined,color: Colors.grey,size: 15,)))),
-    Align(alignment: Alignment.center,
+            const Icon(Icons.arrow_back_ios_outlined,color: Colors.grey,size: 15,)))),
+    const Align(alignment: Alignment.center,
         child: Text('Course Overview',style: TextStyle(fontWeight: FontWeight.bold,fontSize: 21),)),
             Container(
               width: 35,
@@ -56,21 +56,21 @@ Row(
                   borderRadius: BorderRadius.circular(10)
               ),
               child:
-               Icon(
+               const Icon(
 
                 Icons.favorite,color: Colors.white,))
 
 
   ],
 ),
-      SizedBox(height: 35,),
-      Text('UI/UX:Designing with a User-\nCentered Approach.',style: TextStyle(fontSize: 24,fontWeight: FontWeight.bold),),
-      SizedBox(height: 25,),
+      const SizedBox(height: 35,),
+      const Text('UI/UX:Designing with a User-\nCentered Approach.',style: TextStyle(fontSize: 24,fontWeight: FontWeight.bold),),
+      const SizedBox(height: 25,),
 
       Center(
           child:Container(
             width: size.width,
-        decoration: BoxDecoration(
+        decoration: const BoxDecoration(
             borderRadius: BorderRadius.only(
 
                 topRight: Radius.circular(30),
@@ -92,17 +92,17 @@ Positioned(
         color: Colors.white10,
         borderRadius: BorderRadius.circular(40)
       ),
-  child: Icon(Icons.play_arrow,color:Colors.white,size: 40,),
+  child: const Icon(Icons.play_arrow,color:Colors.white,size: 40,),
 ))
           ],
         ),
       )
       ),
       Container(
-        padding: EdgeInsets.all(10),
+        padding: const EdgeInsets.all(10),
         decoration: BoxDecoration(
           color: Colors.grey.shade100,
-          borderRadius: BorderRadius.only(
+          borderRadius: const BorderRadius.only(
 
               bottomRight: Radius.circular(30),
               bottomLeft: Radius.circular(30)
@@ -115,7 +115,7 @@ Positioned(
               children: [
                 Container(
                     decoration: BoxDecoration(
-                        borderRadius: BorderRadius.all(
+                        borderRadius: const BorderRadius.all(
                             Radius.circular(25.0) //                 <--- border radius here
                         ),
                         border: Border.all(
@@ -124,13 +124,13 @@ Positioned(
                     child:
                 IconButton(onPressed: (){
 
-                }, icon: Icon(Icons.play_arrow))),
-                Text('05:10/12:50'),
+                }, icon: const Icon(Icons.play_arrow))),
+                const Text('05:10/12:50'),
                 Container(
                   child: Row(
                     children: [
-                      IconButton(onPressed: (){}, icon: Icon(Icons.volume_down,color:Colors.grey)),
-                      IconButton(onPressed: (){}, icon: Icon(Icons.fullscreen_sharp,color:Colors.black))
+                      IconButton(onPressed: (){}, icon: const Icon(Icons.volume_down,color:Colors.grey)),
+                      IconButton(onPressed: (){}, icon: const Icon(Icons.fullscreen_sharp,color:Colors.black))
 
                     ],
                   ),
@@ -140,7 +140,7 @@ Positioned(
           ],
         ),
       ),
-      SizedBox(height: 30,),
+      const SizedBox(height: 30,),
      Center(child: ToggleButtons(
        disabledColor: Colors.grey,
 selectedColor: Colors.white,
@@ -151,27 +151,27 @@ borderWidth: 2,
           Container(
             width:150,
 
-              padding: EdgeInsets.all(15),
+              padding: const EdgeInsets.all(15),
               child:
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceAround,
                 children: [
-                Text('Playlist',style: TextStyle(fontSize: 17,fontWeight: FontWeight.bold),),
+                const Text('Playlist',style: TextStyle(fontSize: 17,fontWeight: FontWeight.bold),),
 Container(
   width: 30,
-  padding: EdgeInsets.all(2),
+  padding: const EdgeInsets.all(2),
   decoration: BoxDecoration(
     color: Colors.blue.shade50,
     borderRadius: BorderRadius.circular(20)
   ),
-  child: Center(child:Text('65',style: TextStyle(fontWeight: FontWeight.bold,color:Colors.blue),),))
+  child: const Center(child:Text('65',style: TextStyle(fontWeight: FontWeight.bold,color:Colors.blue),),))
         ])
               ),
           Container(
               width:150,
 
-              padding: EdgeInsets.all(15),
-            child:Text('Descriptions',style: TextStyle(fontSize: 17,fontWeight: FontWeight.bold)))
+              padding: const EdgeInsets.all(15),
+            child:const Text('Descriptions',style: TextStyle(fontSize: 17,fontWeight: FontWeight.bold)))
 
         ],
         onPressed: (int index) {
@@ -204,8 +204,8 @@ Container(
                     borderRadius: BorderRadius.circular(20),
                     color: Colors.blueAccent
                 ),
-                child:Icon(Icons.play_arrow,color: Colors.white,)),
-            title: Column(
+                child:const Icon(Icons.play_arrow,color: Colors.white,)),
+            title: const Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 SizedBox(height: 7,),
@@ -227,10 +227,10 @@ Container(
                        height: 100,
                        child: Column(
                       children: [
-                        Text('You need to complete the previous videos!! ') ,
+                        const Text('You need to complete the previous videos!! ') ,
                         ElevatedButton(onPressed: (){
                           Navigator.pop(context);
-                        }, child: Text('Fine!'))
+                        }, child: const Text('Fine!'))
 
                       ],
                     ))
@@ -245,8 +245,8 @@ Container(
 border: Border.all(color: Colors.grey.shade400),
                     color: Colors.white
                 ),
-                child:Center(child:Text('2',style: TextStyle(fontSize: 16),))),
-            title: Column(
+                child:const Center(child:Text('2',style: TextStyle(fontSize: 16),))),
+            title: const Column(
               crossAxisAlignment: CrossAxisAlignment.start,
 
               children: [
@@ -260,7 +260,7 @@ border: Border.all(color: Colors.grey.shade400),
 
               ],
             ),
-            trailing: Icon(Icons.lock),
+            trailing: const Icon(Icons.lock),
 
           ),
           ListTile(
@@ -272,10 +272,10 @@ border: Border.all(color: Colors.grey.shade400),
                     height: 100,
                     child: Column(
                     children: [
-                      Text('You need to complete the previous videos!! ') ,
+                      const Text('You need to complete the previous videos!! ') ,
                       ElevatedButton(onPressed: (){
                         Navigator.pop(context);
-                      }, child: Text('Fine!'))
+                      }, child: const Text('Fine!'))
 
                     ],
                   ))
@@ -291,8 +291,8 @@ border: Border.all(color: Colors.grey.shade400),
 
                     color: Colors.white
                 ),
-                child:Center(child:Text('3',style: TextStyle(fontSize: 16),))),
-            title: Column(
+                child:const Center(child:Text('3',style: TextStyle(fontSize: 16),))),
+            title: const Column(
               crossAxisAlignment: CrossAxisAlignment.start,
 
               children: [
@@ -306,7 +306,7 @@ border: Border.all(color: Colors.grey.shade400),
 
               ],
             ),
-            trailing: Icon(Icons.lock),
+            trailing: const Icon(Icons.lock),
           )
         ],
       ))
@@ -316,7 +316,7 @@ border: Border.all(color: Colors.grey.shade400),
       Positioned(bottom: 0,
           left: 0,
 
-          child: Container(
+          child: SizedBox(
               width: size.width,
               height: 130,
               child: Stack(
@@ -327,7 +327,7 @@ border: Border.all(color: Colors.grey.shade400),
           Container(
             decoration: BoxDecoration(
               color: Colors.white,
-              borderRadius: BorderRadius.only(
+              borderRadius: const BorderRadius.only(
                 topLeft: Radius.circular(35),
                 topRight: Radius.circular(35),
 
@@ -335,17 +335,17 @@ border: Border.all(color: Colors.grey.shade400),
               border: Border.all(color: Colors.grey.shade100)
             ),
 
-            padding: EdgeInsets.all(20),
+            padding: const EdgeInsets.all(20),
               width: size.width,
               height: 130,
               child:Column(children:[
-                Row(
+                const Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
                     Text('Price',style: TextStyle(color: Colors.grey,fontWeight: FontWeight.bold),),
                     Text('\$ 29.99',style: TextStyle(fontSize: 15,color: Colors.black,fontWeight: FontWeight.bold),)
                   ]),
-                SizedBox(height: 15,),
+                const SizedBox(height: 15,),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
@@ -363,22 +363,22 @@ border: Border.all(color: Colors.grey.shade400),
                         borderRadius: BorderRadius.circular(10)
                       ),
                       height: 45,
-                      child: Icon(Icons.shopping_cart,color: Colors.blueAccent,size: 20,),
+                      child: const Icon(Icons.shopping_cart,color: Colors.blueAccent,size: 20,),
                     ))),
                 InkWell(
                     onTap: (){
-                      ScaffoldMessenger.of(context).showSnackBar(SnackBar(
+                      ScaffoldMessenger.of(context).showSnackBar(const SnackBar(
                         content: Text('UX&UI was added to your cart'),
                       ));
                     },
                     child: Ink(child:   Container(
-                      padding: EdgeInsets.all(10),
+                      padding: const EdgeInsets.all(10),
                       width: 290,
                       height: 50,
                       decoration: BoxDecoration(
                           borderRadius: BorderRadius.circular(30),
                           color: Colors.blue.shade600),
-                      child: Center(child:Text('Buy Now!',style: TextStyle(
+                      child: const Center(child:Text('Buy Now!',style: TextStyle(
                           fontSize: 16,fontWeight: FontWeight.bold,
                           color: Colors.white),)),
                     )))
@@ -394,7 +394,6 @@ border: Border.all(color: Colors.grey.shade400),
               )
           )
       )],
-          overflow: Overflow.visible,
     )
     );
   }

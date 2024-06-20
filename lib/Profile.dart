@@ -16,10 +16,10 @@ class _ProfileState extends State<Profile> {
       backgroundColor: Colors.grey.shade200,
       appBar: AppBar(
         backgroundColor: Colors.blue.shade800,
-        title: Text('Profile'),
+        title: const Text('Profile'),
       ),
       body:Container(
-          padding: EdgeInsets.all(20),
+          padding: const EdgeInsets.all(20),
           child:Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
@@ -30,26 +30,26 @@ class _ProfileState extends State<Profile> {
                   shape:RoundedRectangleBorder(borderRadius: BorderRadius.circular(10)),
                   color:  Colors.blue.shade800,
                   child: ListTile(
-                    contentPadding: EdgeInsets.all(4),
+                    contentPadding: const EdgeInsets.all(4),
                     onTap: (){
 
                     },
-                    title: Text('John',style: TextStyle(fontSize: 19,
+                    title: const Text('John',style: TextStyle(fontSize: 19,
                         color: Colors.white,fontWeight: FontWeight.w500
                     ),),
-                    leading: CircleAvatar(
+                    leading: const CircleAvatar(
                       backgroundColor: Colors.white,
                       radius: 35,
                       //  backgroundImage: Icon(Icons.language_outlined),
                     ),
-                    trailing: Icon(Icons.edit,color: Colors.white,),
+                    trailing: const Icon(Icons.edit,color: Colors.white,),
                   ),
                 ) ,
               ),
 
 
-              SizedBox(height: 20,),
-              Text('General',style: TextStyle(
+              const SizedBox(height: 20,),
+              const Text('General',style: TextStyle(
                   fontSize: 20,fontWeight: FontWeight.bold
               ),),
               Card(
@@ -65,7 +65,7 @@ class _ProfileState extends State<Profile> {
                             bool _isObscure = true;
 
                             return AlertDialog(
-                              content: Container(
+                              content: SizedBox(
                                   height: 140,
                                   child:Column(
                                     children: [
@@ -85,7 +85,7 @@ class _ProfileState extends State<Profile> {
                                               borderRadius: BorderRadius.circular(10)
                                           ),child:TextField(
                                         obscureText: _isObscure,
-                                        style: TextStyle(
+                                        style: const TextStyle(
 
                                             fontSize: 17,
                                             textBaseline: TextBaseline.alphabetic,
@@ -96,7 +96,7 @@ class _ProfileState extends State<Profile> {
                                             fontWeight: FontWeight.bold
 
                                         ),
-                                        decoration: InputDecoration(
+                                        decoration: const InputDecoration(
 
                                           hintText: 'Your New Password',
                                           contentPadding: EdgeInsets.all(10),
@@ -108,15 +108,14 @@ class _ProfileState extends State<Profile> {
                                       )),
                                       ElevatedButton(
                                           style:ElevatedButton.styleFrom(
-                                              minimumSize: Size(120,40),
-                                              primary: Colors.red
+                                              minimumSize: const Size(120,40), backgroundColor: Colors.red
                                           ),
                                           onPressed: (){
 
 
                                           },
 
-                                          child: Text('Submit'))
+                                          child: const Text('Submit'))
 
                                     ],
                                   )
@@ -125,22 +124,22 @@ class _ProfileState extends State<Profile> {
                             );
                           });
                         },
-                        title: Text('Change Password',style: TextStyle(
+                        title: const Text('Change Password',style: TextStyle(
                             color: Colors.black,fontWeight: FontWeight.w500
                         ),),
-                        leading:Icon(Icons.lock_outline,color: Colors.black,),
-                        trailing: Icon(Icons.keyboard_arrow_right,color: Colors.black,),
+                        leading:const Icon(Icons.lock_outline,color: Colors.black,),
+                        trailing: const Icon(Icons.keyboard_arrow_right,color: Colors.black,),
                       ),
                       _buildDivider(),
 
                       ListTile(
                         onTap: (){
                         },
-                        title: Text('Change Langage',style: TextStyle(
+                        title: const Text('Change Langage',style: TextStyle(
                             color: Colors.black,fontWeight: FontWeight.w500
                         ),),
-                        leading:Icon(Icons.language_outlined,color: Colors.black,),
-                        trailing: Icon(Icons.keyboard_arrow_right,color: Colors.black,),
+                        leading:const Icon(Icons.language_outlined,color: Colors.black,),
+                        trailing: const Icon(Icons.keyboard_arrow_right,color: Colors.black,),
                       ),
                       _buildDivider(),
 
@@ -148,8 +147,8 @@ class _ProfileState extends State<Profile> {
                   )
 
               ),
-              SizedBox(height: 20,),
-              Text('Notification Settings',style: TextStyle(
+              const SizedBox(height: 20,),
+              const Text('Notification Settings',style: TextStyle(
                   fontSize: 20,fontWeight: FontWeight.bold,color:Colors.indigo
               ),),
               SwitchListTile(value: notifcation, onChanged: (val){
@@ -158,10 +157,10 @@ class _ProfileState extends State<Profile> {
 
                 });
               },
-                activeColor: Colors.blue.shade800,contentPadding: EdgeInsets.all(0),
-                title: Text('Received notification'),
+                activeColor: Colors.blue.shade800,contentPadding: const EdgeInsets.all(0),
+                title: const Text('Received notification'),
               ),
-              SizedBox(height: 15,),
+              const SizedBox(height: 15,),
 
               Card(
 
@@ -171,10 +170,10 @@ class _ProfileState extends State<Profile> {
                   onTap: () async {
 
                   },
-                  title: Text('Sign Out',style: TextStyle(fontSize: 17,
+                  title: const Text('Sign Out',style: TextStyle(fontSize: 17,
                       color: Colors.white,fontWeight: FontWeight.w500
                   ),),
-                  leading:Icon( Icons.doorbell_outlined,color: Colors.red,
+                  leading:const Icon( Icons.doorbell_outlined,color: Colors.red,
                     //  backgroundImage: Icon(Icons.language_outlined),
                   ),
                 ),
@@ -190,10 +189,10 @@ class _ProfileState extends State<Profile> {
   }
   showLoaderDialog(BuildContext context){
     AlertDialog alert=AlertDialog(
-      content: new Row(
+      content: Row(
         children: [
-          CircularProgressIndicator(),
-          Container(margin: EdgeInsets.only(left: 7),child:Text("Loading..." )),
+          const CircularProgressIndicator(),
+          Container(margin: const EdgeInsets.only(left: 7),child:const Text("Loading..." )),
         ],),
     );
     showDialog(barrierDismissible: false,
@@ -214,7 +213,7 @@ class _ProfileState extends State<Profile> {
 
   Widget buildelementCard(BuildContext context, int index) {
     return Container(
-        child:Card(
+        child:const Card(
             child:Row(
               children: [
 

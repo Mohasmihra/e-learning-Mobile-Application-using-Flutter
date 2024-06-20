@@ -1,4 +1,3 @@
-import 'package:e_learning/AllCourses.dart';
 import 'package:e_learning/Courses.dart';
 import 'package:e_learning/HomeScreen.dart';
 import 'package:e_learning/Messages.dart';
@@ -37,7 +36,7 @@ class MyHomePage extends StatefulWidget {
 class _MyHomePageState extends State<MyHomePage> {
   int index=0;
   List<bool> state_b=[true,false,false,false,false];
-List<Widget> widgets=[HomeScreen(),Courses(),Search(),Messages(),Profile()];
+List<Widget> widgets=[const HomeScreen(),const Courses(),const Search(),const Messages(),const Profile()];
   @override
   Widget build(BuildContext context) {
 final Size size=MediaQuery.of(context).size;
@@ -68,7 +67,7 @@ final Size size=MediaQuery.of(context).size;
               bottom: 0,
               left: 0,
 
-              child: Container(
+              child: SizedBox(
                 width: size.width,
                 height: 80,
                 //color: Colors.white,
@@ -79,7 +78,7 @@ child: Stack(
       size: Size(size.width,80),
       painter: BNBCustomerPainter(),
     ),
-    Container(
+    SizedBox(
       width: size.width,
       height: 80,
       child:Row(
@@ -94,8 +93,8 @@ child: Stack(
              state_b[0]=true;
              index=0;
            });
-         }, icon: Icon(Icons.home,color: Colors.grey,size: 35)),
-          state_b[1]? IconButton(onPressed: (){}, icon: Icon(Icons.album_rounded,color: Colors.blue,size: 35)):IconButton(onPressed: (){
+         }, icon: const Icon(Icons.home,color: Colors.grey,size: 35)),
+          state_b[1]? IconButton(onPressed: (){}, icon: const Icon(Icons.album_rounded,color: Colors.blue,size: 35)):IconButton(onPressed: (){
             setState(() {
               for(int i=0;i<state_b.length;i++){
                 state_b[i]=false;
@@ -103,8 +102,8 @@ child: Stack(
               state_b[1]=true;
               index=1;
             });
-          }, icon: Icon(Icons.album_rounded,color: Colors.grey,size: 35)),
-          state_b[2]? IconButton(onPressed: (){}, icon: Icon(Icons.search,color: Colors.blue,size: 35,)):IconButton(onPressed: (){
+          }, icon: const Icon(Icons.album_rounded,color: Colors.grey,size: 35)),
+          state_b[2]? IconButton(onPressed: (){}, icon: const Icon(Icons.search,color: Colors.blue,size: 35,)):IconButton(onPressed: (){
             setState(() {
               for(int i=0;i<state_b.length;i++){
                 state_b[i]=false;
@@ -112,8 +111,8 @@ child: Stack(
               state_b[2]=true;
               index=2;
             });
-          }, icon: Icon(Icons.search,color: Colors.grey,size: 35)),
-          state_b[3]? IconButton(onPressed: (){}, icon: Icon(Icons.message,color: Colors.blue,size: 35)):IconButton(onPressed: (){
+          }, icon: const Icon(Icons.search,color: Colors.grey,size: 35)),
+          state_b[3]? IconButton(onPressed: (){}, icon: const Icon(Icons.message,color: Colors.blue,size: 35)):IconButton(onPressed: (){
             setState(() {
               for(int i=0;i<state_b.length;i++){
                 state_b[i]=false;
@@ -121,8 +120,8 @@ child: Stack(
               state_b[3]=true;
               index=3;
             });
-          }, icon: Icon(Icons.message,color: Colors.grey,size: 35)),
-          state_b[4]?  IconButton(onPressed: (){}, icon: Icon(Icons.person,color: Colors.blue,size: 35)):IconButton(onPressed: (){
+          }, icon: const Icon(Icons.message,color: Colors.grey,size: 35)),
+          state_b[4]?  IconButton(onPressed: (){}, icon: const Icon(Icons.person,color: Colors.blue,size: 35)):IconButton(onPressed: (){
             setState(() {
               for(int i=0;i<state_b.length;i++){
                 state_b[i]=false;
@@ -130,7 +129,7 @@ child: Stack(
               state_b[4]=true;
               index=4;
             });
-          }, icon: Icon(Icons.person,color: Colors.grey,size: 35)),
+          }, icon: const Icon(Icons.person,color: Colors.grey,size: 35)),
 
         ],
       ),

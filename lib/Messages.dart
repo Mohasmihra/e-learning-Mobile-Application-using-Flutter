@@ -15,17 +15,17 @@ class _MessagesState extends State<Messages> {
       appBar: AppBar(
 
         backgroundColor: Colors.white,
-        title: Text('Notification',style: TextStyle(color: Colors.black),),
+        title: const Text('Notification',style: TextStyle(color: Colors.black),),
         actions: [
          Container(
-           margin: EdgeInsets.only(right: 20),
+           margin: const EdgeInsets.only(right: 20),
 
-             child: Center(child:Text('Mark All as read',style: TextStyle(color: Colors.blue,fontSize: 16),)))
+             child: const Center(child:Text('Mark All as read',style: TextStyle(color: Colors.blue,fontSize: 16),)))
 
         ],
       ),
       body: Container(
-        padding: EdgeInsets.all(10),
+        padding: const EdgeInsets.all(10),
     child:Column(
       crossAxisAlignment: CrossAxisAlignment.start,
 
@@ -34,7 +34,7 @@ class _MessagesState extends State<Messages> {
             SizedBox(
               width: size.width,
               height: 74,
-              child:Row(
+              child:const Row(
 children: [
   CircleAvatar(
     backgroundColor: Colors.black,
@@ -64,12 +64,12 @@ children: [
 
                 ),
         _buildDivider(),
-        SizedBox(height: 5,),
+        const SizedBox(height: 5,),
 
         SizedBox(
           width: size.width,
           height: 74,
-          child:Row(
+          child:const Row(
               children: [
                 CircleAvatar(
                     backgroundColor: Colors.black,
@@ -99,12 +99,12 @@ children: [
 
         ),
         _buildDivider(),
-        SizedBox(height: 5,),
+        const SizedBox(height: 5,),
 
         SizedBox(
           width: size.width,
           height: 74,
-          child:Row(
+          child:const Row(
               children: [
                 CircleAvatar(
                     backgroundColor: Colors.black,
@@ -134,12 +134,12 @@ children: [
 
         ),
         _buildDivider(),
-        SizedBox(height: 5,),
+        const SizedBox(height: 5,),
 
         SizedBox(
           width: size.width,
           height: 74,
-          child:Row(
+          child:const Row(
               children: [
                 CircleAvatar(
                     backgroundColor: Colors.black,
@@ -169,12 +169,12 @@ children: [
 
         ),
         _buildDivider(),
-        SizedBox(height: 5,),
+        const SizedBox(height: 5,),
 
         SizedBox(
           width: size.width,
           height: 74,
-          child:Row(
+          child:const Row(
               children: [
                 CircleAvatar(
                     backgroundColor: Colors.black,
@@ -204,12 +204,12 @@ children: [
 
         ),
         _buildDivider(),
-        SizedBox(height: 5,),
+        const SizedBox(height: 5,),
 
         SizedBox(
           width: size.width,
           height: 74,
-          child:Row(
+          child:const Row(
               children: [
                 CircleAvatar(
                     backgroundColor: Colors.black,
@@ -239,11 +239,11 @@ children: [
 
         ),
         _buildDivider(),
-        SizedBox(height: 5,),
+        const SizedBox(height: 5,),
         SizedBox(
           width: size.width,
           height: 74,
-          child:Row(
+          child:const Row(
               children: [
                 CircleAvatar(
                     backgroundColor: Colors.black,
